@@ -17,9 +17,12 @@ const HeroSection = () => {
         setUnderlineWidth(underlineTextRef.current.offsetWidth);
       }
     }
-    updateUnderlineWidth();
-    window.addEventListener('resize', updateUnderlineWidth);
-    return () => window.removeEventListener('resize', updateUnderlineWidth);
+
+    if (typeof window !== 'undefined') {
+      updateUnderlineWidth(); // Wywołanie funkcji
+      window.addEventListener('resize', updateUnderlineWidth);
+      return () => window.removeEventListener('resize', updateUnderlineWidth);
+    }
   }, []);
 
   return (

@@ -12,14 +12,18 @@ const Footer: React.FC = () => {
 
   useEffect(() => {
     // Sprawdź, czy użytkownik już zaakceptował pliki cookie
-    const cookiesAccepted = localStorage.getItem('cookiesAccepted');
-    if (!cookiesAccepted) {
-      setShowCookieNotification(true);
+    if (typeof window !== 'undefined') {
+      const cookiesAccepted = localStorage.getItem('cookiesAccepted');
+      if (!cookiesAccepted) {
+        setShowCookieNotification(true);
+      }
     }
   }, []);
 
   const acceptCookies = () => {
-    localStorage.setItem('cookiesAccepted', 'true');
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('cookiesAccepted', 'true');
+    }
     setShowCookieNotification(false);
   };
 
