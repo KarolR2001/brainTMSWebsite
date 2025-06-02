@@ -2,16 +2,19 @@ import { Metadata } from 'next';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import HeroSection from '@/sections/HeroSection';
-import DlaczegoMySection from '@/sections/DlaczegoMySection';
-import OfferSection from '@/sections/OfferSection';
-import FunkcjeProgramuSection from '@/sections/FunkcjeProgramuSection';
-import PrzecinekSection from '@/sections/PrzecinekSection';
-import AplikacjaSection from '@/sections/AplikacjaSection';
-import AplikacjaMobilnaSection from '@/sections/AplikacjaMobilnaSection';
-import OpinieSection from '@/sections/OpinieSection';
-import KontaktSection from '@/sections/KontaktSection';
-import FAQSection from '@/sections/FAQSection';
 import JsonLd from '@/components/JsonLd';
+import dynamic from 'next/dynamic';
+
+// Dynamiczne importy dla sekcji
+const DlaczegoMySection = dynamic(() => import('@/sections/DlaczegoMySection'), { ssr: false });
+const OfferSection = dynamic(() => import('@/sections/OfferSection'), { ssr: false });
+const FunkcjeProgramuSection = dynamic(() => import('@/sections/FunkcjeProgramuSection'), { ssr: false });
+const PrzecinekSection = dynamic(() => import('@/sections/PrzecinekSection'), { ssr: false });
+const AplikacjaSection = dynamic(() => import('@/sections/AplikacjaSection'), { ssr: false });
+const AplikacjaMobilnaSection = dynamic(() => import('@/sections/AplikacjaMobilnaSection'), { ssr: false });
+const OpinieSection = dynamic(() => import('@/sections/OpinieSection'), { ssr: false });
+const FAQSection = dynamic(() => import('@/sections/FAQSection'), { ssr: false });
+const KontaktSection = dynamic(() => import('@/sections/KontaktSection'), { ssr: false });
 
 export const metadata: Metadata = {
   title: 'BrainTMS - Nowoczesny System Zarządzania Transportem',
