@@ -1,0 +1,11 @@
+This directory contains company logos for the review section.
+
+The following logo files need to be added here:
+- company1.png
+- company2.png 
+- company3.png
+- company4.png
+- company5.png
+- company6.png
+
+Please replace this text file with actual logo images. 

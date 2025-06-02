@@ -1,0 +1,44 @@
+# Dokumentacja i pliki projektowe do zignorowania
+BrainTMS Project PRD.md
+ImplementationPlan.md
+opis_sekcji.md
+PlanSEOImplementation.md
+ProgressTracking.md
+TechStack.md
+
+# Zależności
+node_modules/
+frontend/node_modules/
+.pnp
+.pnp.js
+
+# Logi
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Pliki specyficzne dla systemów operacyjnych
+.DS_Store
+Thumbs.db
+
+# Pliki tymczasowe edytorów i IDE
+*.swp
+*~
+.vscode/
+.idea/
+
+# Pliki budowania i produkcyjne Next.js (w podkatalogu frontend)
+frontend/.next/
+frontend/out/
+
+# Pliki konfiguracyjne środowiska lokalnego Next.js (w podkatalogu frontend)
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.production.local
+frontend/.env.test.local
+
+# Wyniki testów (w podkatalogu frontend)
+frontend/coverage/
+
+# Inne specyficzne dla Next.js
+frontend/.eslintcache 
