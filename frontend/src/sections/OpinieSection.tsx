@@ -58,23 +58,33 @@ const reviews = [
 const OpinieSection: React.FC = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
-  const slidesPerView = isMobile ? 1 : (typeof window !== 'undefined' && window.innerWidth < 1024 ? 2 : 3);
-  const totalSlides = Math.ceil(reviews.length / slidesPerView);
+  const [slidesPerView, setSlidesPerView] = useState(3); // Domyślna wartość dla SSR/desktop
 
   useEffect(() => {
+    const calculateSlidesPerView = () => {
+      if (window.innerWidth < 640) { // Mobile
+        return 1;
+      } else if (window.innerWidth < 1024) { // Tablet
+        return 2;
+      } else { // Desktop
+        return 3;
+      }
+    };
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
+      setSlidesPerView(calculateSlidesPerView());
     };
-    
-    // Set initial state
-    handleResize();
-    
-    // Add event listener
-    window.addEventListener('resize', handleResize);
-    
-    // Cleanup
-    return () => window.removeEventListener('resize', handleResize);
+
+    if (typeof window !== 'undefined') {
+      handleResize(); // Ustaw stany początkowe po stronie klienta
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
+
+  // Oblicz totalSlides na podstawie stanu slidesPerView
+  const totalSlides = Math.ceil(reviews.length / slidesPerView);
 
   const handleNext = () => {
     setActiveSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
