@@ -105,7 +105,7 @@ const KontaktSection: React.FC = () => {
     <section 
       id="kontakt" 
       data-testid="kontakt-section"
-      className="relative min-h-screen w-full py-12 lg:py-20 overflow-hidden"
+      className="relative w-full py-12 lg:py-20 overflow-hidden"
       style={{ 
         backgroundImage: 'url(/loginBackground.webp)', 
         backgroundSize: 'cover',
