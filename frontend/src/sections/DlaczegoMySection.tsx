@@ -10,7 +10,7 @@ const features = [
       'obliczanie rentowności trasy',
       'narzędzia wspierające optymalne wykorzystanie floty'
     ],
-    imageSrc: '/org-transp-small.webp',
+    imageSrc: '/tir.png',
     imageAlt: 'Organizacja transportu'
   },
   {
@@ -20,7 +20,7 @@ const features = [
       'monitoring etapów realizacji zlecenia',
       'komunikacja z kierowcą przez aplikację mobilną'
     ],
-    imageSrc: '/efek-zarz-small.webp',
+    imageSrc: '/efektywne_zarzadzanie.png',
     imageAlt: 'Efektywne zarządzanie zleceniami'
   },
   {
@@ -30,7 +30,7 @@ const features = [
       'tworzenie samodzielnych faktur',
       'analiza kosztów floty'
     ],
-    imageSrc: '/kontr-fin-small.webp',
+    imageSrc: '/kontr-fin-small.png',
     imageAlt: 'Kontrola finansowa i rachunkowość'
   },
   {
@@ -40,7 +40,7 @@ const features = [
       'błyskawiczne wyszukiwanie danych',
       'panel dla klienta i przewoźnika'
     ],
-    imageSrc: '/optymal-czasu-small.webp',
+    imageSrc: '/optymal-czasu-small.png',
     imageAlt: 'Optymalizacja czasu'
   }
 ];
